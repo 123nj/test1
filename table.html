@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+    <div class="table-top">
+        <label><input id='select' type="checkbox" onclick="state()">全选</label>
+        <button class="btn" onclick='showwindow()'>新增</button>
+        <button class="btn" onclick="shanchutem()">删除</button>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <td colspan="5" class="table">用户信息管理</td>
+            </tr>
+            <tr>
+                <td>选择</td>
+                <td>用户名</td>
+                <td>密码</td>
+                <td>性别</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody id="tabody">
+            <tr>
+                <td><input type="checkbox" class="sta"></td>
+                <td>小明</td>
+                <td>123</td>
+                <td>男</td>
+                <td>
+                    <button onclick="showxiu(this)">修改</button>
+                    <button onclick="shanchu(this)">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="sta"></td>
+                <td>小蓝</td>
+                <td>123</td>
+                <td>男</td>
+                <td>
+                    <button onclick="showxiu(this)">修改</button>
+                    <button onclick="shanchu(this)">删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="sta"></td>
+                <td>小红</td>
+                <td>123</td>
+                <td>女</td>
+                <td>
+                    <button onclick="showxiu(this)">修改</button>
+                    <button onclick="shanchu(this)">删除</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   <!-- 新增管理弹窗-->
+    <div id='addwin' class="add-frame">
+       <div class="add-top">
+           <div class="add-title">新增管理</div>
+           <div class="add-content">
+               <input id='add-name' class="add-input" placeholder="请输入用户名" type="text"/>
+               <input id='add-paw' class="add-input" placeholder="请输入密码" type='password'/>
+               <select id='add-sex' class="add-input">
+                   <option>男</option>
+                   <option>女</option>
+               </select>
+               <button class="add-button" onclick="yesaddwin()">确定</button>
+               <button class="add-button" onclick="hideaddwin()">取消</button>
+           </div>
+       </div>
+    </div>
+
+
+    <!-- 修改管理弹窗-->
+    <div id='xiumendframe' class="mend-frame">
+        <div class="mend-top">
+            <div class="mend-title">修改管理</div>
+            <div class="mend-content">
+                <input id="xiuname" class="mend-input" placeholder="请输入用户名" type="text"/>
+                <input id="xiupaw" class="mend-input" placeholder="请输入密码" type='password'/>
+                <select  id="xiusex"class="mend-input">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+                <button class="mend-button" onclick="xiuframe()">确定</button>
+                <button class="mend-button" onclick="hidexiu()" >取消</button>
+            </div>
+        </div>
+     </div>
+
+    <script src="js/table.js"></script>
+</body>
+</html>
